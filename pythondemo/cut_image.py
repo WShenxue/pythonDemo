@@ -2,30 +2,30 @@
 from PIL import Image
 
 
-def fill_image(image):
-    width, height = image.size
+def fill_image(img):
+    width, height = img.size
     new_image_length = width if width > height else height
-    new_image = Image.new(image.mode, (new_image_length, new_image_length), color='white')
+    new_image = Image.new(img.mode, (new_image_length, new_image_length), color='white')
     if width > height:
-        new_image.paste(image(0, int(new_image_length - height) / 2))
+        new_image.paste(img(0, int(new_image_length - height) / 2))
     elif width < height:
-        new_image.paste(image, int(new_image_length - width) / 2, 0)
+        new_image.paste(img, int(new_image_length - width) / 2, 0)
     else:
         # 增加同样大小图片处理
-        new_image = image
+        new_image = img
     return new_image
 
 
-def cut_image(image):
-    width, height = image.size
+def cut_image(img):
+    width, height = img.size
     item_width = int(width / 3)
     box_list = []
     for i in range(0, 3):
         for j in range(0, 3):
             box = (j * item_width, i * item_width, (j + 1) * item_width, (i + 1) * item_width)
             box_list.append(box)
-    image_list = [image.crop(box) for box in box_list]
-    return image_list
+    cut_image_list = [img.crop(box) for box in box_list]
+    return cut_image_list
 
 
 def save_image(image_list):
