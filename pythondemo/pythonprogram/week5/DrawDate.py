@@ -25,21 +25,21 @@ def drawDigit(digit):
 
 
 def drawDate(date):
-    turtle.pencolor("red")
     for i in date:
         if i == '+':
-            turtle.write('年', font=("Arial", 18, "normal"))
             turtle.pencolor("blue")
+            turtle.write('年', font=("Arial", 18, "normal"))
             turtle.fd(40)
         elif i == '-':
             turtle.pencolor("green")
             turtle.write('月', font=("Arial", 18, "normal"))
             turtle.fd(40)
         elif i == '=':
-            turtle.pencolor("pupper")
+            turtle.pencolor("purple")
             turtle.write('日', font=("Arial", 18, "normal"))
             turtle.fd(40)
-        else :
+        else:
+            turtle.pencolor("red")
             drawDigit(eval(i))
 
 
