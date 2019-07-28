@@ -85,6 +85,7 @@ not x | 逻辑“非”
     pip install pyinstall
     pyinstall -F <文件名>
     生成的_pycache_和build可以删除，生成文件在dist下
+    pyinstall -i *.ico -F *.py
     
 参数 | 描述
 --- | ---
