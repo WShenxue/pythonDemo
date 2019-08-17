@@ -243,10 +243,42 @@ S>=T 或 S>T | 返回True或False，判断S和T的包含关系
  
  
  #### 6.4 字典类型及操作
+ 映射：一种键（索引）和值（数据）的对应
+ 键值对：键是数据索引的扩展
+ 字典是键值对的集合，键值对之间无序
+ 采用大括号{}或dict()创建，键值对用冒号:表示
+ 
+ 函数或方法 | 描述
+ --- | ---
+ del d[k] | 删除键k所对应的值
+ k in d | 判断键k是否在字典中
+ d.keys() | 返回d中所有的键信息
+ d.values() | 返回d中的所有值信息
+ d.items() | 返回d中的所有键值对信息
+ d.get(k, <default>) | 键k存在，则返回相应的值，不存在则返回<default> 
+ d.pop(k, <default>) | 键k存在，则取出相应的值，不存在则取出<default>
+ d.popitem() | 从字典k中取出一个键值对， 以元组形式返回
+ d.clear() | 清空 
+ len(d) | 返回d中字典的个数
+ 
+ 元素遍历： for k in d:
+ 
+ 
+ #### 6.5 jieba库的使用
+ 优秀的中文分词第三方库（pip install jieba）
+ 精确模式：把文本精确的切分开，不存在冗余   jieba.lcut(s)
+ 全词模式：扫描出所有可能的词语，又冗余    jieba.lcut(s, cut_all = True)
+ 搜索引擎模式：在精确模式上，对长词再次切分  jieba.lcut_for_search(s)
+ jieba.add_word("蟒蛇语言")
  
  
  
  
+ 
+#### 6.6 文本词频统计（实例10）
+读文件 txt = open(File, "r").read()
+转小写 str.lower()
+
  
  
  
