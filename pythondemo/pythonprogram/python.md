@@ -393,8 +393,102 @@ width | 指定词云对象生成图片的宽度，默认400像素
 height | 指定词云对象生成图片的高度，默认200像素
 min_font_size | 指定词云中字体的最小字号
  
- 
- 
+### 八、程序设计方法学
+#### 8.1 体育竞技分析
+需求：毫厘是多少，如何分析体育竞技比赛
+输入：球员水平
+输出：可预测的比赛成绩
+
+计算思维：抽象+自动化
+自顶向下：解决复杂问题的有效方法
+- 将一个总问题表达为若干个小问题组成的形式
+- 使用同样的方法进一步分解小问题
+- 直至，小问题可以用计算机简单明了的解决
+
+#### 8.2 python程序设计思维
+逻辑思维：推理和演绎
+实证思维：实验与验证
+计算思维：设计和构造（Computational Thinking）
+    抽象问题的计算过程，利用计算机自动化求解
+    计算思维是基于计算机的思维方式
+计算生态：
+    1983，Richard Stallman启动GUN项目（大教堂模式）
+    1989：GUN通用许可协议诞生
+    1991：Linus Torvalds发布了linux内核（集市模式）
+    1998：网景浏览器开源，产生了Mozilla
+没有顶层设计、以功能为单位、具备三个特点：
+    - 竞争发展
+    - 相互依存
+    - 迅速更迭
+提高用户体验的方法：
+    进度展示
+    异常处理
+    其他：打印输出、日志文件、帮助信息
+基本的程序设计模式：
+    IPO
+    自顶向下设计
+    模块化设计（模块内部紧耦合，模块之间松耦合）
+    配置化设计（引擎+配置）
+应用开发的四个步骤：
+    产品定义
+    系统架构
+    设计与实现
+    用户体验
+
+#### 8.3 python第三方库安装
+13万个第三方库：http://pypi.org/
+pypi: Python Package Index
+在pypi.org搜索blockChain(区块链)
+
+    pip -h
+    pip install -U:-U更新已安装的指定第三方库
+    pip uninstall:卸载
+    pip download:下载但不安装指定的第三方库
+    pip show:列出某个指定第三方库的详细信息
+    pip search:根据关键词在名称和介绍中搜索第三方库
+    pip list:列出当前系统已经安装的第三方库
+集成安装：结合特定Python开发工具的批量安装
+    Anaconda:https://www.continuum.io   
+    适合数据计算领域的集成开发工具
+    
+python官方文档：
+    3.7.3版本后，官方文档有中文
+    https://docs.python.org/zh-cn/3/
+#### 8.4 os库基本介绍
+os库提供通用的、基本的操作系统交互功能
+-路径操作：os.path子库，处理文件路径及信息
+    import os.path
+    impirt os.path as op
+函数 | 描述
+--- | ---
+os.path.abspath(path) | 返回path在当前系统中的绝对路径
+os.path.normpath(path) | 归一化path的表示形式，统一用\\分隔路径
+os.path.relpath(path) | 返回当前程序与文件之间的相对路径
+os.path.dirname(path) | 返回path中共的目录名称
+os.path.basename(path) | 返回path中最后的文件名称
+os.path.join(path, *paths) | 组合path与paths，返回一个路径字符串
+os.path.exist(path) | 判断path对应文件或目录是否存在，返回True或False
+os.path.isfile(path) | 判断path所对应的位置是否为已存在的文件，返回True或False
+os.path.isdir(path) | 判断path所对应的位置是否为已存在的目录，返回True或False
+os.path.getatime(path) | 返回path对应文件或目录上一次的访问时间 
+os.path.getmtime(path) | 返回path对应文件或目录最近一次的修改时间
+os.path.getctime(path) | 返回path对应文件或目录的创建时间
+os.path.getsize(path) | 返回path对应文件的大小，以字节为单位
+
+- 进程管理：启动系统中其他程序
+os.system(command)
+- 环境参数：获得系统软硬件信息等环境参数
+函数 | 描述
+--- | ---
+os.chdir(path) | 修改当前程序操作的路径
+os.getcws() | 返回程序的当前路径
+os.getlogin() | 获得当前系统登陆用户名
+os.cpu_count() | 获取当前系统的CPU数量
+os.urandom(n) | 获得n个字节长度的随机字符串，通常用于加密解密运算
+
+#### 8.5 第三方库自动安装脚本
+需求：批量安装第三方库，能否自动执行
+
  
  
  
